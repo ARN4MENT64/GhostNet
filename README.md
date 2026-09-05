@@ -32,9 +32,8 @@ Because `GhostNet.exe` is compiled from a PowerShell script using `ps2exe` and h
    - Scroll down to *Exclusions* -> *Add or remove exclusions*.
    - Add the folder containing `GhostNet.exe` or allow the file from the *Protection history*.
 
-```powershell
-Install-Module -Name ps2exe -Scope CurrentUser -Force
-Invoke-PS2EXE -InputFile ".\wifi-chat.ps1" -OutputFile ".\GhostNet.exe" -Title "GhostNet" -Description "Autonomous P2P Chat" -Company "ARN4MENT" -Product "GhostNet" -Version "1.0.0"
+## ⚠️ Windows SmartScreen Note
+Because the executable is generated from a script and lacks a commercial digital certificate, **Windows SmartScreen will trigger a warning on the first launch**. This is standard behavior for unsigned open-source binaries.
 ```
 
 ## 📜 License
